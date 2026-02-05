@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,46 +9,57 @@
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     background-color: #ffffff;
-    color: #333333;
+    color: #000000;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 
-.container {
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
+.inner-container {
+    margin-top: auto;
 }
 
 .logo {
-    margin-bottom: 40px;
+    margin-bottom: 26px;
 }
 
 .logo img {
     max-width: 100%;
     height: auto;
-    width: 400px;
+    width: 500px;
+    /* width: 50vw; */
+    /* max-width: 800px; */
 }
 
 .tagline {
-    font-size: 14px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #666666;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-weight: 300;
 }
 
 .contact-info {
+    font-family: "Saira", sans-serif;
     margin-bottom: 30px;
 }
 
 .contact-info a {
-    color: #333333;
     text-decoration: none;
     font-size: 16px;
     display: block;
@@ -54,40 +67,35 @@ body {
     transition: color 0.3s ease;
 }
 
-.contact-info a:hover {
-    color: #666666;
-}
-
 .phone {
-    font-size: 18px;
+    font-family: "Saira", sans-serif;
+    font-size: 14px;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .social-links {
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
 .social-links a {
     display: inline-block;
     margin: 0 10px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.social-links a:hover {
-    opacity: 1;
 }
 
 .social-links img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 footer {
-    margin-top: 60px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
     font-size: 12px;
-    color: #999999;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: auto;
 }
 
 /* レスポンシブデザイン */
@@ -97,34 +105,46 @@ footer {
     }
 
     .tagline {
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 1.5px;
     }
 
-    .contact-info a {
+    .contact-info {
         font-size: 14px;
     }
 
     .phone {
-        font-size: 16px;
+        font-size: 12px;
+    }
+
+    footer {
+        margin-top: auto;
     }
 }
 
 @media (max-width: 480px) {
+    .logo {
+        margin-bottom: 20px;
+    }
+
     .logo img {
         width: 250px;
     }
 
     .tagline {
         font-size: 11px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
-    .contact-info a {
-        font-size: 13px;
+    .contact-info {
+        font-size: 11px;
+    }
+
+    .phone {
+        font-size: 10px;
     }
 
     footer {
-        margin-top: 40px;
+        margin-top: auto;
     }
 }
